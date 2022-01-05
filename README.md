@@ -18,3 +18,7 @@ Interview Case: Membuat sebuah web application sederhana untuk menampilkan data 
 # Database :
 
 - PGadmin
+
+# Deploy Server with Heroku :
+
+API : https://books-app-5121.herokuapp.com/
