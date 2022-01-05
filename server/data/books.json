@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Pemrograman terstruktur dengan c++",
+    "author_id": 1,
+    "isbn": "978-623-6591-90-1",
+    "publisher_name": "Pustaka Learning Center",
+    "series": null,
+    "revision": "1",
+    "published_at": "2021-02-01 00:00:00",
+    "price": 120000
+  },
+  {
+    "id": 2,
+    "name": "Buku ajar algoritma dan pemrograman dalam bahasa C++ [sumber elektronis]",
+    "author_id": 3,
+    "isbn": "978-623-6833-67-4",
+    "publisher_name": "Umsida Press",
+    "series": null,
+    "revision": null,
+    "published_at": "2021-02-01 00:00:00",
+    "price": 150000
+  },
+  {
+    "id": 3,
+    "name": "Pemahaman algoritma pemrograman dengan bahasa C++",
+    "author_id": 2,
+    "isbn": "978-623-227-477-8",
+    "publisher_name": "Uwais Inspirasi Indonesia",
+    "series": null,
+    "revision": null,
+    "published_at": "2021-02-01 00:00:00",
+    "price": 220000
+  },
+  {
+    "id": 4,
+    "name": "Struktur data & algortima bahasa pemrograman C++",
+    "author_id": 4,
+    "isbn": "978-623-6591-55-0",
+    "publisher_name": "Pustaka Learning Center",
+    "series": null,
+    "revision": null,
+    "published_at": "2021-02-01 00:00:00",
+    "price": 190000
+  },
+  {
+    "id": 5,
+    "name": "Dasar pemrograman C++",
+    "author_id": 2,
+    "isbn": "978-623-6591-51-2",
+    "publisher_name": "Pustaka Learning Center",
+    "series": null,
+    "revision": null,
+    "published_at": "2021-02-01 00:00:00",
+    "price": 99000
+  },
+  {
+    "id": 6,
+    "name": "Struktur data : konsep, kasus, dan implementasi dalam bahasa C++",
+    "author_id": null,
+    "isbn": "978-602-328-285-2",
+    "publisher_name": "Alauddin University Press",
+    "series": null,
+    "revision": null,
+    "published_at": "2021-02-01 00:00:00",
+    "price": 59000
+  }
+]
