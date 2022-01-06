@@ -76,7 +76,13 @@ export default function Details() {
               component="span"
               sx={{ color: pink[50], fontSize: 14, marginTop: 1 }}
             >
-              {author.email}
+              Email : {author.email}
+            </Box>
+            <Box
+              component="span"
+              sx={{ color: pink[50], fontSize: 14, marginTop: 1 }}
+            >
+              Phone : {author.phone}
             </Box>
             <Box
               sx={{
