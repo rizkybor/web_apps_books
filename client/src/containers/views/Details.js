@@ -17,7 +17,7 @@ export default function Details() {
 
   useEffect(() => {
     dispatch(getAuthor(id));
-  });
+  }, []);
 
   let toHomePage = () => {
     navigate(`/`);
