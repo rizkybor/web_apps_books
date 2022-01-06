@@ -40,7 +40,7 @@ export default function Details() {
             alignItems: "center",
             bgcolor: pink[400],
             overflow: "hidden",
-            borderRadius: "48px",
+            borderRadius: "25px",
             boxShadow: 8,
             fontWeight: "bold",
             height: 233,
