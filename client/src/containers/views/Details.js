@@ -1,73 +1,28 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { getAuthor } from "../../store/actions/authors";
+import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
+import { Grid } from "@mui/material";
 import { alpha } from "@mui/material/styles";
 import Container from "@mui/material/Container";
 import { pink, purple } from "@mui/material/colors";
-import { Grid } from "@mui/material";
-import ButtonUnstyled, {
-  buttonUnstyledClasses,
-} from "@mui/base/ButtonUnstyled";
-import { styled } from "@mui/system";
+import { getAuthor } from "../../store/actions/authors";
 
 export default function Details() {
   let { id } = useParams();
   const dispatch = useDispatch();
   const author = useSelector((state) => state.authors.authors);
   let navigate = useNavigate();
-  console.log(author, "<< siapa yaa ?");
 
   useEffect(() => {
     dispatch(getAuthor(id));
   });
 
-  let toNewsPage = () => {
+  let toHomePage = () => {
     navigate(`/`);
   };
 
-  const blue = {
-    500: "#007FFF",
-    600: "#0072E5",
-    700: "#0059B2",
-  };
-
-  const CustomButtonRoot = styled("span")`
-    font-family: IBM Plex Sans, sans-serif;
-    font-weight: bold;
-    font-size: 0.875rem;
-    background-color: ${blue[500]};
-    padding: 12px 24px;
-    border-radius: 8px;
-    color: white;
-    transition: all 150ms ease;
-    cursor: pointer;
-    border: none;
-
-    &:hover {
-      background-color: ${blue[600]};
-    }
-
-    &.${buttonUnstyledClasses.active} {
-      background-color: ${blue[700]};
-    }
-
-    &.${buttonUnstyledClasses.focusVisible} {
-      box-shadow: 0 4px 20px 0 rgba(61, 71, 82, 0.1),
-        0 0 0 5px rgba(0, 127, 255, 0.5);
-      outline: none;
-    }
-
-    &.${buttonUnstyledClasses.disabled} {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-  `;
-
-  function CustomButton(props) {
-    return <ButtonUnstyled {...props} component={CustomButtonRoot} />;
-  }
   return (
     <Container maxWidth="sm">
       <Grid
@@ -113,11 +68,14 @@ export default function Details() {
           >
             <Box
               component="span"
-              sx={{ color: purple[900], fontSize: 30, mt: 1 }}
+              sx={{ color: purple[900], fontSize: 25, mt: 1 }}
             >
               {author.name}
             </Box>
-            <Box component="span" sx={{ color: pink[50], fontSize: 18 }}>
+            <Box
+              component="span"
+              sx={{ color: pink[50], fontSize: 14, marginTop: 1 }}
+            >
               {author.email}
             </Box>
             <Box
@@ -138,9 +96,13 @@ export default function Details() {
                 },
               }}
             ></Box>
-            <CustomButton onClick={toNewsPage} variant="contained" size="small">
+            <Button
+              onClick={() => toHomePage()}
+              variant="contained"
+              size="small"
+            >
               Back
-            </CustomButton>
+            </Button>
           </Box>
         </Box>
       </Grid>
