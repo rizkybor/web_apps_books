@@ -2,7 +2,8 @@ import React, { Fragment } from "react";
 import { styled } from "@mui/material/styles";
 import TableRow from "@mui/material/TableRow";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
-import { Link } from "react-router-dom";
+import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -25,22 +26,31 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 export default function ColumnBooks(props) {
-  const row = props;
+  const { Books } = props;
+  let navigate = useNavigate();
 
-  console.log(row, "<<<");
+  let handleId = (props) => {
+    navigate(`/${props.id}`);
+  };
   return (
     <Fragment>
-      {/* {row.map((e) => ( */}
-      <StyledTableRow key="Disini Keynya">
-        <StyledTableCell component="th" scope="row">
-          "Books Name"
-        </StyledTableCell>
-        <StyledTableCell align="right">"Authors Name"</StyledTableCell>
-        <StyledTableCell align="right">"Who Publish ?"</StyledTableCell>
-        <StyledTableCell align="right">"ISBN Code"</StyledTableCell>
-        <StyledTableCell align="right">"How Many ?"</StyledTableCell>
-      </StyledTableRow>
-      {/* ))} */}
+      {Books.map((e) => (
+        <StyledTableRow key={e.id}>
+          <StyledTableCell component="th" scope="row">
+            {e.name}
+          </StyledTableCell>
+          <StyledTableCell align="center">
+            {e.author !== null && (
+              <Button onClick={() => handleId(e.author)} variant="text">
+                {e.author.name}
+              </Button>
+            )}
+          </StyledTableCell>
+          <StyledTableCell align="right">{e.publisher_name}</StyledTableCell>
+          <StyledTableCell align="right">{e.isbn}</StyledTableCell>
+          <StyledTableCell align="right">{e.price}</StyledTableCell>
+        </StyledTableRow>
+      ))}
     </Fragment>
   );
 }
