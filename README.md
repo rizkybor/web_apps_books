@@ -12,7 +12,8 @@ Interview Case: Membuat sebuah web application sederhana untuk menampilkan data 
 # Client Tech :
 
 - ReactJS
-- React Router
+- React-Router-Dom.V6
+- Redux
 - MaterialUI
 
 # Database :
@@ -22,3 +23,7 @@ Interview Case: Membuat sebuah web application sederhana untuk menampilkan data 
 # Deploy Server with Heroku :
 
 API : https://books-app-5121.herokuapp.com/
+
+# Deploy Server with Firebase :
+
+Yukk Web App : https://project-yukk.web.app/

@@ -2,7 +2,7 @@ const cors = require("cors");
 
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 const { book, author } = require("./models");
 
@@ -49,7 +49,6 @@ app.get("/:id", async (req, res, next) => {
     }
     res.send(result);
   } catch (err) {
-    console.log(err);
     next(err);
   }
 });
